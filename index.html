@@ -2,8 +2,52 @@
 	<head>  
 		<meta charset="utf-8" />
 		<title>Caraman</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet"> 
+        <link rel="icon" type="image/png" href="logo.png" />
+        <style>
+            *{
+                margin: 0;
+                font-family: 'Days One', sans-serif;
+                overflow: hidden;
+            }
+            .imageBox{
+                display: flex;
+                margin-top: 50vh; 
+                transform: translateY(-50%); 
+                justify-content: center;
+                
+            }
+            #textDiv{
+                text-align: center;
+                font-size: 30px;
+                position: absolute;
+                top: 5%;
+            }
+            </style>
 	</head> 
-	<body>   
-        
+	<body>
+        <div class="imageBox">
+            <p id="textDiv">Oseras-tu me boire ?</p>
+            <img src="cara.png" id="imgClickAndChange" style="min-width: 500px; height: auto;"onclick="changeImage()">
+        </div>
     </body>
+
+    <script type="text/javascript">
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src == "mathieu.png") 
+            {
+                document.getElementById("imgClickAndChange").src = "cara.png";
+            }
+            else 
+            {
+                document.getElementById("imgClickAndChange").src = "mathieu.png";
+                document.getElementById("imgClickAndChange").style = "max-width: 200px; height: auto; padding-top: 150px;";
+                document.getElementById("textDiv").innerHTML = "Non, c'est ma cara !";
+                 
+            }
+        }
+    </script>
 </html>
